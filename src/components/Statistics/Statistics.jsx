@@ -5,8 +5,8 @@ const listItemMaker = data => {
   return data.map(el => {
     return (
       <CardItem key={el.id}>
-        <span className="label">{el.label}</span>
-        <span className="quantity"> {el.percentage}%</span>
+        <span>{el.label}</span>
+        <span> {el.percentage}%</span>
       </CardItem>
     );
   });
@@ -14,9 +14,9 @@ const listItemMaker = data => {
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <Card className="statistics">
-      {title && <Title className="title">{title}</Title>}
-      <CardSet className="stat-list">{listItemMaker(stats)}</CardSet>
+    <Card>
+      {title && <Title>{title}</Title>}
+      <CardSet>{listItemMaker(stats)}</CardSet>
     </Card>
   );
 };
